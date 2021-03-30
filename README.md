@@ -44,6 +44,19 @@ Things I didn't care about:
 
 ## Setting Aeschylus up
 
+### Prerequisites
+
+On Debian 10:
+
+```
+sudo apt install zsh audacity swh-plugins python3-pip
+pip3 install ffmpeg-normalize
+export PATH="$PATH:/home/rpet/.local/bin:"
+```
+(NOTE: add the path to aeschylus in `PATH`)
+
+### Configuration file
+
 Aeschylus takes as its first argument a configuration file, which is a zsh
 script. You need to set the following variables in your configuration file:
 
