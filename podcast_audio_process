@@ -74,7 +74,7 @@ ffmpeg \
   -i $1 \
   -filter_complex "[0:a]${pan}[a]; \
                    [a]highpass=frequency=80[a]; \
-                   [a]agate=mode=downward:range=-15dB:threshold=${noisegate_threshold}dB: \
+                   [a]agate=range=-15dB:threshold=${noisegate_threshold}dB: \
                       ratio=3:attack=1.5:release=120:knee=10dB[a]; \
                    [a]ladspa=file=${compressor_so}:p=${compressor_name}:c=c0=0|c1=1.5ms|c2=4ms| \
                       c3=${compressor_upper_threshold}db|c4=6|c5=3db[a];
